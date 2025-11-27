@@ -44,7 +44,7 @@ How it Works
 1. User asks a question
 2. Query is converted to embedding
 3. FAISS retrieves top matching rows
-4. Retrieved context is passed to FLAN-T5 model
+4. Retrieved context is passed to model
 5. The model generates a human-like answer
 
 Limitations
