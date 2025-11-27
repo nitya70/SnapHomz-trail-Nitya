@@ -19,6 +19,8 @@ The app allows users to ask natural language questions and retrieves relevant pr
 - SentenceTransformers
 - HuggingFace Transformers
 - Pandas, NumPy
+- Pyngrok (for Colab public links)
+
 
 ## How to Run
 
@@ -40,6 +42,27 @@ streamlit run app.py
 http://localhost:8501
 ```
 
+
+**if your are running this in colab**
+1. Install requirements in your colab
+
+```bash
+   !pip install -r requirements.txt
+```
+
+2. Run this in your colab
+
+```bash
+from pyngrok import ngrok
+!streamlit run app.py &
+
+public_url = ngrok.connect(8501)
+print(public_url)
+```
+
+3. Click the printed public URL to open your app.
+
+   
 How it Works
 1. User asks a question
 2. Query is converted to embedding
